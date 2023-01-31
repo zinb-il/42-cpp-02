@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 17:12:27 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/31 17:53:21 by ziloughm         ###   ########.fr       */
+/*   Created: 2023/01/31 12:53:50 by ziloughm          #+#    #+#             */
+/*   Updated: 2023/01/31 12:56:43 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.h"
+#	ifndef FIXED_H
+# define FIXED_H
 
-int main( void ) {
-    Fixed a;
-    Fixed b( a );
-    Fixed c;
+# include <iostream>
+# include <string>
 
-    c = b;
-    
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
-    
-    return 0;
-}
+# include "Fixed.hpp"
+
+#	endif
