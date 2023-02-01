@@ -6,12 +6,13 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:54:44 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/01/31 17:42:36 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/01 16:09:43 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	ifndef FIXED_HPP
 # define FIXED_HPP
+
 
 class Fixed
 {
