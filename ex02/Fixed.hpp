@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:54:44 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/02 18:46:47 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/02 21:48:37 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ class Fixed
         bool    operator>=(Fixed const &ob);
         bool    operator==(Fixed const &ob);
         bool    operator!=(Fixed const &ob);
-        void    operator++(Fixed const &ob);
+        Fixed   & operator++(void);//Prefix
+        Fixed   operator++(int);//Postfix
+        Fixed   & operator--(void);
+        Fixed   operator--(int);
         
         
         int getRawBits(void) const;
