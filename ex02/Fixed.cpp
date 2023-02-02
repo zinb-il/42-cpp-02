@@ -6,11 +6,15 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:54:57 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/02 16:29:18 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:34:38 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.h"
+
+/********************************************************************/
+/*                     Constructors  and Destructor                 */
+/********************************************************************/
 
 Fixed::Fixed():_fixed_nb(0)
 {
@@ -37,6 +41,12 @@ Fixed::Fixed(Fixed const &ob)
     std::cout << "Copy constructor called" << std::endl;
     *this = ob;
 }
+/********************************************************************/
+
+
+/********************************************************************/
+/*                    Comparison Operator Overload                  */
+/********************************************************************/
 
 Fixed & Fixed::operator=(Fixed const &ob)
 {
@@ -44,6 +54,63 @@ Fixed & Fixed::operator=(Fixed const &ob)
     this->_fixed_nb = ob.getRawBits();
     return *this;
 }
+
+bool    Fixed::operator<(Fixed const &ob)
+{
+    return (this->_fixed_nb < ob.getRawBits());
+}
+
+bool    Fixed::operator<=(Fixed const &ob)
+{
+    return (this->_fixed_nb <= ob.getRawBits());
+}
+
+bool    Fixed::operator>(Fixed const &ob)
+{
+    return (this->_fixed_nb > ob.getRawBits());
+}
+
+bool    Fixed::operator>=(Fixed const &ob)
+{
+    return (this->_fixed_nb >= ob.getRawBits());
+}
+
+bool    Fixed::operator==(Fixed const &ob)
+{
+    return (this->_fixed_nb == ob.getRawBits());
+}
+
+bool    Fixed::operator!=(Fixed const &ob)
+{
+    return (this->_fixed_nb != ob.getRawBits());
+}
+/********************************************************************/
+
+
+/********************************************************************/
+/*                     Arithmetic Operator Overload                 */
+/********************************************************************/
+
+Fixed Fixed::operator+(Fixed const &ob)
+{
+    return (this->_fixed_nb + ob.getRawBits());
+}
+
+Fixed Fixed::operator-(Fixed const &ob)
+{
+    return (this->_fixed_nb - ob.getRawBits());
+}
+
+Fixed Fixed::operator*(Fixed const &ob)
+{
+    return (this->_fixed_nb * ob.getRawBits());
+}
+
+Fixed Fixed::operator/(Fixed const &ob)
+{
+    return (this->_fixed_nb / ob.getRawBits());
+}
+/********************************************************************/
 
 int Fixed::getRawBits(void) const
 {
