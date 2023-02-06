@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:12:27 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/03 18:31:52 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:00:26 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ int main( void ) {
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
     std::cout << Fixed::min( a, b ) << std::endl;
-    std::cout << ++a *  Fixed(100) +  c<< std::endl;
     return 0;
 }
